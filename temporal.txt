@@ -1,0 +1,71 @@
+csv (separados por comas, punto coma, tab)
+nombre;apellido1;apellido2;asing1;asing2
+pepe;dominguez;puga;html;programacion
+bea;guay;guay;bd;-
+
+resources  _ES  _UK
+menu=menu
+click=pulsar
+title=titulo
+resolucion_defecto=340x480
+nombre=pepito
+apellido1=dominguez
+apellido2=puga
+asing1=html
+asing2=programacion
+
+json
+{
+    nombre:"pepe",
+    edad:33,
+    casado:false,
+    asignaturaFav: ["html", "programacion"],
+    direccion:{
+        calle:"hispanidad",
+        piso: 5,
+        cp: 36950
+    }
+}
+
+{
+    alumnos: [
+        alumno:{
+            nombre:"pepe",
+            ape1:"gomez",
+            ape2:"puga",
+            asignaturaFav: ["html", "programacion"]
+        },
+        alumno:{
+            nombre:"rosa",
+            ape1:"gomez",
+            ape2:"puga",
+            asignaturaFav: ["html"]
+        }
+    ]
+}
+
+xml
+<alumnos>
+    <alumno nombre="pepe" ape1="dom" ape2="puga">
+        <asignaturas>
+            <asignatura nombre="programacion"/>
+            <asignatura nombre="html"/>
+        </asignaturas>
+    </alumno>
+    <alumno nombre="rosa" ape1="dom" ape2="puga">
+        <asignaturas>
+            <asignatura nombre="programacion"/>
+            <asignatura nombre="html"/>
+            <asignatura nombre="c"/>
+        </asignaturas>
+    </alumno>
+</alumnos>
+
+
+yaml
+alumnos 
+    alumno
+        nombre: pepe
+        edad: 33
+        
+
