@@ -1,4 +1,4 @@
-/*package com.example.demo.services;
+package com.example.demo.services;
 
 import java.util.ArrayList;
 
@@ -11,16 +11,15 @@ import org.springframework.stereotype.Service;
 @Service
 public class CocheService {
     @Autowired
-    CocheRepository repository;
+    CocheRepository cocheRepository;
 
 
-    public Coche savePet(Coche coche){
-        return CocheRepository.save(coche);
+    public Coche saveCoche(Coche coche){
+        return cocheRepository.save(coche);
     }
 
-    public ArrayList<Coche> getAllPets(){
-        ArrayList<Coche> pets = (ArrayList<Coche>) CocheRepository.findAll();
+    public ArrayList<Coche> getAllCoche(){
+        ArrayList<Coche> pets = (ArrayList<Coche>) cocheRepository.findAll();
         return pets;
     }
 }
-*/

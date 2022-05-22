@@ -1,6 +1,7 @@
-/*package com.example.demo.services;
+package com.example.demo.services;
 
 import com.example.demo.models.Translate;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,4 +19,3 @@ public class TranslatorService {
         return text;
     }
 }
-*/

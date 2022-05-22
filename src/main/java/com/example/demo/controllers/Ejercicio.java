@@ -4,10 +4,10 @@ package com.example.demo.controllers;
 
 import java.util.ArrayList;
 
-
+import com.example.demo.models.Coche;
 import com.example.demo.models.Pet;
+import com.example.demo.services.CocheService;
 
-import com.example.demo.services.PetService;
 
 
 //import com.example.demo.models.Data;
@@ -30,7 +30,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Ejercicio {
 
     @Autowired
-    PetService petService;
+    CocheService cocheservice;
    
    /* @Autowired
     TranslatorService translatorService;*/
@@ -59,24 +59,24 @@ public class Ejercicio {
   //3º
    // http://localhost:8080/guarda?nombre=???
    @GetMapping("/guarda")
-   public String addPet(@RequestParam String nombre, @RequestParam String especie){
+   public String addEscuderia(@RequestParam String nombre, @RequestParam String escuderia) {
        //insert into pet(name) values ("nombre")
-       Pet pet = new Pet();
-       pet.setName(nombre);
-       pet.setSpecies(especie);
-       petService.savePet(pet);
-       return "Mascota registrada correctamente";
+       Coche coche = new Coche();
+       coche.setName(nombre);
+       coche.setEscuderia(escuderia);
+       cocheservice.saveCoche(coche);
+       return "Escudería registrada perfectamente";
    }
 
 // http://localhost:8080/listar
 @GetMapping("/listar")
-public String petList(){
-    ArrayList<Pet> pets = petService.getAllPets();
-    String listado = "Mascotas registradas:<br/>";
-    for(Pet pet : pets){
-        listado +=pet.getId() + " ";
-        listado += pet.getName() + " ";
-        listado += pet.getSpecies();
+public String cocheList(){
+    ArrayList<Coche> coche = cocheservice.getAllCoche();
+    String listado = "Escuderías registradas:<br/>";
+    for(Coche coches : coche){
+        listado +=coches.getId() + " ";
+        listado += coches.getName() + " ";
+        listado += coches.getEscuderia();
         listado += "<br/>";
     }
     return listado;

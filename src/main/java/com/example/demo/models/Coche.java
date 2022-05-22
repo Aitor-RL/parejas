@@ -21,22 +21,30 @@ public class Coche {
     @Column(nullable = false)
     String escuderia;
 
-    public Long getId(){
+    public Long getId() {
         return id;
-    } 
-
-    public void setName(String name){
-        this.name = name;
     }
-    public String getName(){
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
         return name;
     }
 
-    public void setSpecies(String escuderia){
-        this.escuderia = escuderia;
+    public void setName(String name) {
+        this.name = name;
     }
-    public String getSpecies(){
+
+    public String getEscuderia() {
         return escuderia;
     }
+
+    public void setEscuderia(String escuderia) {
+        this.escuderia = escuderia;
+    }
+
+    
 
 }
