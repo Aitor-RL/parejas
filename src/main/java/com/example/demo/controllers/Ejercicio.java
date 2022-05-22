@@ -41,7 +41,12 @@ public class Ejercicio {
     // http://localhost:8080/
     @GetMapping("/")
     public String greet() {
-        return "Bienvenido al servidor backend de Zoel y Aitor";
+        return "Bienvenido al servidor backend<br/>"+
+        "<br/> 1º /contar/(palabra))  Introduces la palabra por URL y te indicará las vocales y consonantes que contiene la misma<br/>"+
+        "<br/>/listar Listar todas las escuderías y nombres que están en la base de datos<br/>"+
+        "<br/>/guarda?nombre=XXXX&escuderia=XXXX  Para registrar un piloto y una escudería<br/>"+
+        "<br/>/invertir/(palabra)  Para darle la vuelta a la palabra o frase introducida<br/>"+
+        "<br/>/traduce/(palabra) Para traducir la palabra o la frase introducida";
     }
 
     // http://localhost:8080/contar/ana
