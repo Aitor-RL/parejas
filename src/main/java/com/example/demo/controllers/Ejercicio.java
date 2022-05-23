@@ -5,10 +5,9 @@ package com.example.demo.controllers;
 import java.util.ArrayList;
 
 import com.example.demo.models.Coche;
-
+import com.example.demo.models.Translate;
 import com.example.demo.services.CocheService;
-
-
+import com.example.demo.services.TranslatorService;
 
 //import com.example.demo.models.Data;
 
@@ -32,8 +31,8 @@ public class Ejercicio {
     @Autowired
     CocheService cocheservice;
    
-   /* @Autowired
-    TranslatorService translatorService;*/
+   @Autowired
+    TranslatorService translatorService;
   
    
 
@@ -94,8 +93,8 @@ public String darVuelta(@PathVariable String name) {
 }
 
 
-/*5-*/
- /*// http://localhost:8080/traduce/????
+/*5-
+ /* http://localhost:8080/traduce/????*/
  @GetMapping("/traduce/{frase}")
  public String getTranslation(@PathVariable String frase){
      Translate t = translatorService.translateMetod(frase);
@@ -103,5 +102,5 @@ public String darVuelta(@PathVariable String name) {
      return "La palabra en ingles es: "+t.responseData.translatedText;
  }
 
-*/
+
 }
